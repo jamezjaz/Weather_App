@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
+
 import { header } from './selectors';
 import currentDate from './date';
 
 const nav = (() => {
-    header.innerHTML = `
+  header.innerHTML = `
                       <nav class="navbar navbar-light header">
                           <a class="navbar-brand text-dark" href="index.html">
                               <i class="fas fa-cloud-sun-rain p-2"></i>
@@ -21,6 +23,6 @@ const nav = (() => {
                           </a>
                       </nav>
                       `;
-  })();
-  
-  export default nav;
+})();
+
+export default nav;
