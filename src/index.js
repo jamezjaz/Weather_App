@@ -8,6 +8,7 @@ const iconElement = document.querySelector('.icon');
 const temp = document.querySelector('.temp');
 const weatherElement = document.querySelector('.weather');
 const hiLow = document.querySelector('.hi-low');
+const describe = document.querySelector('.description');
 const pressureElement = document.querySelector('.pressure');
 const humidElement = document.querySelector('.humidity');
 
@@ -34,6 +35,7 @@ const showResults = (data) => {
   temp.innerHTML = `${Math.floor(data.main.temp)}<span>°C</span>`;
   weatherElement.innerText = data.weather[0].main;
   hiLow.innerText = `${Math.floor(data.main.temp_min)}°C / ${Math.floor(data.main.temp_max)}°C`;
+  describe.innerText = data.weather[0].description;
   pressureElement.innerHTML = `${data.main.pressure}<span> Pa</span>`;
   humidElement.innerText = `${data.main.humidity}`;
 }
