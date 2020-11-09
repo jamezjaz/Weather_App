@@ -1,1 +1,1 @@
-console.log("James");
+(()=>{const e=document.querySelector(".search");document.querySelector("#btn").addEventListener("click",(()=>{t(e.value)}));const t=e=>{fetch(`http://api.openweathermap.org/data/2.5/weather?q=${e}&units=metric&APPID=fec0e887bafb28038fbe61858d51c3d4`,{mode:"cors"}).then((e=>e.json())).then(c)},c=e=>{console.log(e)}})();
