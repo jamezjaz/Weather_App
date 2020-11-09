@@ -3,7 +3,7 @@ const api = {
     url: 'http://api.openweathermap.org/data/2.5/',
     icon: 'http://openweathermap.org/img/w/'
   }
-    
+  const header = document.querySelector('.header'); 
   const city = document.querySelector('.city');
   const iconElement = document.querySelector('.icon');
   const temp = document.querySelector('.temp');
@@ -15,4 +15,4 @@ const api = {
   const search = document.querySelector('.search');
   const searchBtn = document.querySelector('#btn');
 
-export { api, city, iconElement, temp, weatherElement, hiLow, describe, pressureElement, humidElement, search, searchBtn };
+export { api, header, city, iconElement, temp, weatherElement, hiLow, describe, pressureElement, humidElement, search, searchBtn };

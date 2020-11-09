@@ -1,3 +1,4 @@
+import nav from './navbar';
 import { api, city, iconElement, temp, weatherElement, hiLow, describe, pressureElement, humidElement, search, searchBtn } from './selectors';
 
 searchBtn.addEventListener('click', () => {
