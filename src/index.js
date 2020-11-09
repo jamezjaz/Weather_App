@@ -3,6 +3,11 @@ const api = {
   url: 'http://api.openweathermap.org/data/2.5/',
   icon: 'http://openweathermap.org/img/w/'
 }
+const city = document.querySelector('.city');
+const iconElement = document.querySelector('.icon');
+const temp = document.querySelector('.temp');
+const weatherElement = document.querySelector('.weather');
+const hiLow = document.querySelector('.hi-low');
 
 const search = document.querySelector('.search');
 const searchBtn = document.querySelector('#btn');
@@ -21,9 +26,10 @@ const getResults = (inquire) => {
 
 const showResults = (data) => {
   console.log(data);
-  let city = document.querySelector('.city');
-  const iconElement = document.querySelector('.icon');
   city.innerText = `${data.name}, ${data.sys.country}`;
   const icon = `${api.icon}` + data.weather[0].icon + '.png';
   iconElement.setAttribute('src', icon);
+  temp.innerHTML = `${Math.floor(data.main.temp)}<span>°C</span>`;
+  weatherElement.innerText = data.weather[0].main;
+  hiLow.innerText = `${Math.floor(data.main.temp_min)}°C / ${Math.floor(data.main.temp_max)}°C`;
 }
