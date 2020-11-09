@@ -1,4 +1,5 @@
 import { header } from './selectors';
+import currentDate from './date';
 
 const nav = (() => {
     header.innerHTML = `
