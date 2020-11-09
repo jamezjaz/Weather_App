@@ -21,4 +21,9 @@ const getResults = (inquire) => {
 
 const showResults = (data) => {
   console.log(data);
+  let city = document.querySelector('.city');
+  const iconElement = document.querySelector('.icon');
+  city.innerText = `${data.name}, ${data.sys.country}`;
+  const icon = `${api.icon}` + data.weather[0].icon + '.png';
+  iconElement.setAttribute('src', icon);
 }
