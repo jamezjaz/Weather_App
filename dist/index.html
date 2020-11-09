@@ -9,19 +9,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container container-fluid">
-        <header class="header"></header>
-        <div class="date"><span>Today's Date: </span></div>
-        <div>
-            <input type="text" autocomplete="off" class="search" placeholder="Type city name and hit enter...">
-            <button id="btn" class="btn btn-info" type="submit">Search</button>
+    <header class="container container-fluid">
+        <div class="header"></div>
+        <div class="date d-flex justify-content-center"><span>Today's Date: </span></div>
+    </header>
+    <div class="container container-fluid text-white">
+        <div class="my-3 d-flex justify-content-center">
+            <input type="text" autocomplete="off" class="search w-25 mx-1 border-0 px-2" placeholder="Type city name and hit enter...">
+            <button id="btn" class="btn btn-light" type="submit">Search</button>
         </div>
-        <main>
-            <section class="location">
+        <main class="d-flex flex-column align-items-center">
+            <section>
                 <img class="icon" src="http://openweathermap.org/img/w/04n.png" alt="icon">
                 <div class="city">Enugu, NG</div>
             </section>
-            <div class="current">
+            <div>
                 <div class="temp">25<span>°C</span></div>
                 <div class="weather">Sunny</div>
                 <div class="hi-low">22°C / 27°C</div>

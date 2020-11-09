@@ -32,12 +32,12 @@ const showResults = (data) => {
     return Math.floor((temp * (9 / 5)) + 32);
   }
   const newTemp = tempInF(tempInC);
-  temp.innerHTML = `<button class='btn btn-light'><span class='weather-atrributes'>Temp: </span></button>${tempInC}°C`;
+  temp.innerHTML = `<button class='btn btn-light mr-1'><span class='weather-atrributes'>Temp: </span></button>${tempInC}°C`;
   temp.addEventListener('click', () => {
     if (temp.innerHTML.includes('C')) {
-      temp.innerHTML = `<button class='btn btn-light'><span class='weather-atrributes'>Temp: </span></button>${newTemp}°F`;
+      temp.innerHTML = `<button class='btn btn-light mr-1'><span class='weather-atrributes'>Temp: </span></button>${newTemp}°F`;
     } else if (temp.innerHTML.includes('F')) {
-      temp.innerHTML = `<button class='btn btn-light'><span class='weather-atrributes'>Temp: </span></button>${tempInC}°C`;
+      temp.innerHTML = `<button class='btn btn-light mr-1'><span class='weather-atrributes'>Temp: </span></button>${tempInC}°C`;
     }
     // console.log('Great');
   });

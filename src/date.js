@@ -5,7 +5,7 @@ const currentDate = (() => {
     const options = { weekday: 'long', month: 'short', day: 'numeric' };
     const today = new Date();
     dateElement.innerHTML = today.toLocaleDateString('en-US', options);
-    dateElement.classList = 'font-weight-light text-dark p-1';
+    dateElement.classList = 'font-weight-bold text-dark px-1';
     date.appendChild(dateElement);
   })();
   
