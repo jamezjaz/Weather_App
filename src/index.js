@@ -1,4 +1,5 @@
-/* eslint-disable no-unused-vars, no-use-before-define, arrow-body-style, prefer-template */
+/* eslint-disable no-unused-vars, no-use-before-define,
+arrow-body-style, prefer-template, no-console */
 
 import nav from './navbar';
 import {
@@ -15,7 +16,10 @@ const getResults = (inquire) => {
     .then(data => {
       return data.json();
     })
-    .then(showResults);
+    .then(showResults)
+    .catch((error) => {
+      console.warn(error + ' Something went wrong');
+    });
 };
 
 const showResults = (data) => {
