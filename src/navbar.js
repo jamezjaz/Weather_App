@@ -8,6 +8,7 @@ const nav = (() => {
                               <i class="fas fa-cloud-sun-rain p-2"></i>
                               Weather App
                           </a>
+                          <span>Click on Temp button to toggle temperature scales</span>
                           <a class="navbar-brand text-dark" href="#">
                           <span class="px-4">
                               <i class="fas fa-map-marker-alt"></i>
