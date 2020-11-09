@@ -29,13 +29,13 @@ const getResults = (inquire) => {
 
 const showResults = (data) => {
   console.log(data);
-  city.innerText = `${data.name}, ${data.sys.country}`;
   const icon = `${api.icon}` + data.weather[0].icon + '.png';
   iconElement.setAttribute('src', icon);
-  temp.innerHTML = `${Math.floor(data.main.temp)}<span>°C</span>`;
-  weatherElement.innerText = data.weather[0].main;
-  hiLow.innerText = `${Math.floor(data.main.temp_min)}°C / ${Math.floor(data.main.temp_max)}°C`;
-  describe.innerText = data.weather[0].description;
-  pressureElement.innerHTML = `${data.main.pressure}<span> Pa</span>`;
-  humidElement.innerText = `${data.main.humidity}`;
+  city.innerHTML = `<span class='weather-atrributes'>City/Country: </span>${data.name}, ${data.sys.country}`;
+  temp.innerHTML = `<span class='weather-atrributes'>Temp: </span>${Math.floor(data.main.temp)}<span>°C</span>`;
+  weatherElement.innerHTML = `<span class='weather-atrributes'>Weather: </span>${data.weather[0].main}`;
+  hiLow.innerHTML  = `<span class='weather-atrributes'>Low/High: </span>${Math.floor(data.main.temp_min)}°C / ${Math.floor(data.main.temp_max)}°C`;
+  describe.innerHTML  = `<span class='weather-atrributes'>Description: </span>${data.weather[0].description}`;
+  pressureElement.innerHTML = `<span class='weather-atrributes'>Atm. Pressure: </span>${data.main.pressure}<span> Pa</span>`;
+  humidElement.innerHTML = `<span class='weather-atrributes'>Humidity: </span>${data.main.humidity}`;
 }
