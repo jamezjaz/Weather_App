@@ -49,7 +49,7 @@ const showResults = (data) => {
   // High_Low Toggle
   const hiLowInC = `${Math.floor(data.main.temp_min)}°C / ${Math.floor(data.main.temp_max)}`;
   const hiLowInF = (hiLow) => {
-    return `${Math.floor(data.main.temp_min)}°F / ${Math.floor(data.main.temp_max)}`;
+    return `${Math.floor(data.main.temp_min * (9 / 5) + 32)}°F / ${Math.floor(data.main.temp_max * (9 / 5) + 32)}`;
   };
   const newHighLow = hiLowInF(hiLowInC);
   hiLow.innerHTML = `<span class='weather-atrributes'>Low/High: </span>${hiLowInC}°C`;
