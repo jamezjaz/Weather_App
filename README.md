@@ -18,7 +18,7 @@ This was achieved through use of fetch(), promises(), .then(), and .catch() to r
 
 ## Live Link
 
-It is deployed on AWS S3 [here](http://tell-me-weather.s3-website.us-east-2.amazonaws.com/)
+It is deployed on AWS S3 [here](http://weather-app1.s3-website.us-east-2.amazonaws.com/)
 
 ## Features
 
