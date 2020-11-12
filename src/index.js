@@ -2,9 +2,10 @@
 arrow-body-style, prefer-template, no-console */
 
 import nav from './navbar';
+import gihpyApi from './weatherBg';
 import {
   api, city, iconElement, temp, weatherElement, hiLow, describe,
-  pressureElement, humidElement, search, searchBtn,
+  pressureElement, humidElement, search, searchBtn, main
 } from './selectors';
 
 searchBtn.addEventListener('click', () => {
@@ -61,4 +62,17 @@ const showResults = (data) => {
       hiLow.innerHTML = `<span class='weather-atrributes'>Low/High: </span>${hiLowInC}°C`;
     }
   });
+
+  weatherBg(data);
 };
+
+const weatherBg = (data) => {
+  if (data.cod === 200) {
+    main.style.display = 'block';
+    const giphy = gihpyApi.giphyJson(`${data.weather[0].main} weather`);
+    const giphyRecord = giphy.then(data => {
+      main.style.backgroundImage = `url(${data.data.images.downsized.url})`;
+      main.style.backgroundSize = 'cover';
+    });
+  }
+}

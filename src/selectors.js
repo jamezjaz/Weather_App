@@ -15,8 +15,9 @@ const search = document.querySelector('.search');
 const searchBtn = document.querySelector('#btn');
 const header = document.querySelector('.header');
 const date = document.querySelector('.date');
+const main = document.querySelector('.main');
 
 export {
   api, city, iconElement, temp, weatherElement, hiLow, describe,
-  pressureElement, humidElement, search, searchBtn, header, date,
+  pressureElement, humidElement, search, searchBtn, header, date, main,
 };
