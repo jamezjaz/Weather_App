@@ -11,8 +11,8 @@ searchBtn.addEventListener('click', () => {
   getResults(search.value);
 });
 
-const getResults = (inquire) => {
-  fetch(`${api.url}weather?q=${inquire}&units=metric&APPID=${api.key}`, { mode: 'cors' })
+const getResults = async (inquire) => {
+  await fetch(`${api.url}weather?q=${inquire}&units=metric&APPID=${api.key}`, { mode: 'cors' })
     .then(data => {
       return data.json();
     })
