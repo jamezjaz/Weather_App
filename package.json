@@ -4,6 +4,9 @@
   "description": "This is a weather app project built with JS, HTML, and CSS",
   "main": "index.js",
   "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "start": "webpack-dev-server --mode development --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

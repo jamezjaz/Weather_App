@@ -12,14 +12,15 @@ searchBtn.addEventListener('click', () => {
 });
 
 const getResults = async (inquire) => {
-  await fetch(`${api.url}weather?q=${inquire}&units=metric&APPID=${api.key}`, { mode: 'cors' })
-    .then(data => {
-      return data.json();
-    })
-    .then(showResults)
-    .catch((error) => {
-      console.warn(error + ' Something went wrong');
-    });
+  try {
+    await fetch(`${api.url}weather?q=${inquire}&units=metric&APPID=${api.key}`, { mode: 'cors' })
+      .then(data => {
+        return data.json();
+      })
+      .then(showResults)
+    } catch(err) {
+    alert('Oops! Something went wrong. Check your spellings or internet please. Error Details: ' + err);
+  }
 };
 
 const showResults = (data) => {
