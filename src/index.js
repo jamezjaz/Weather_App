@@ -40,6 +40,7 @@ const showResults = (data) => {
   };
   const newTemp = tempInF(tempInC);
   temp.innerHTML = `<button class='btn btn-light mr-1'><span class='weather-atrributes'>Temp: </span></button>${tempInC}°C`;
+  temp.className = 'text-danger display-4';
   temp.addEventListener('click', () => {
     if (temp.innerHTML.includes('C')) {
       temp.innerHTML = `<button class='btn btn-light mr-1'><span class='weather-atrributes'>Temp: </span></button>${newTemp}°F`;
