@@ -1,11 +1,11 @@
 /* eslint-disable no-unused-vars, no-use-before-define,
-arrow-body-style, prefer-template, no-console */
+arrow-body-style, prefer-template, no-console, no-alert */
 
 import nav from './navbar';
 import gihpyApi from './weatherBg';
 import {
   api, city, iconElement, temp, weatherElement, hiLow, describe,
-  pressureElement, humidElement, search, searchBtn, main
+  pressureElement, humidElement, search, searchBtn, main,
 } from './selectors';
 
 searchBtn.addEventListener('click', () => {
@@ -18,8 +18,8 @@ const getResults = async (inquire) => {
       .then(data => {
         return data.json();
       })
-      .then(showResults)
-    } catch(err) {
+      .then(showResults);
+  } catch (err) {
     alert('Oops! Something went wrong. Check your spellings or internet please. Error Details: ' + err);
   }
 };
@@ -75,4 +75,4 @@ const weatherBg = (data) => {
       main.style.backgroundSize = 'cover';
     });
   }
-}
+};
