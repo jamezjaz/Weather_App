@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.weather-atrributes {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+body {
+  background: radial-gradient(black 15%, transparent 16%) 0 0, radial-gradient(black 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-size: 16px 16px;
+  min-height: 100vh;
+}
+
+header {
+  background: radial-gradient(white 15%, transparent 16%) 0 0, radial-gradient(white 15%, transparent 16%) 8px 8px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 0 1px, radial-gradient(rgba(255, 255, 255, 0.1) 15%, transparent 20%) 8px 9px;
+  background-color: rgba(252, 249, 249, 0.9);
+  background-size: 16px 16px;
+}
+
+input {
+  border-radius: 1rem 0 1rem 0;
+  transition: 0.2s ease-out;
+}
+
+input:focus {
+  background-color: rgba(255, 255, 255, 0.6);
+}
